@@ -25,8 +25,9 @@ public class UrlController {
 
     @Operation(summary = "Cria uma URL curta")
     @PostMapping("/encurtar")
-    public Url shorten(@RequestBody Url url){
-        return service.createShortUrl(url.getOriginalUrl());
+    public String shorten(@RequestBody Url url){
+        Url saved = service.createShortUrl(url.getOriginalUrl());
+        return "http://localhost:8080/" + saved.getShortCode();
     }
 
     @Operation(summary = "Redireciona para URL original usando o código curto (não testável no Swagger)")
