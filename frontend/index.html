@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="bg-gray-300 flex flex-col items-center justify-center min-h-screen">
+  <h1 class="text-3xl font-bold mb-6">Encurtador de Links</h1>
+
+  <input id="urlInput" type="text" placeholder="Cole o link aqui" class="border p-3 w-80 rounded-lg shadow-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+<button onclick="encurtar()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg shadow-lg transition">Encurtar</button>
+
+
+  <div id="resultado" class="mt-4 text-lg text-green-700"></div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
